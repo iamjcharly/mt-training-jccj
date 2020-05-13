@@ -1,0 +1,22 @@
+<!-- <div  class="animated fadeIn" *ngIf="farms">
+  <h5>All Farms</h5>
+  <div>
+    <ul>
+      <li *ngFor="let farm of farms;">
+        <a (click)="selectFarm(farm.id)" style="cursor:pointer">{{farm.farmName}}</a>
+      </li>
+    </ul>
+  </div>
+</div> -->
+
+<div class="animated fadeIn" *ngIf="farms" class="control-section">
+  <h5>All Farms</h5>
+  <ejs-grid [dataSource]='farms' allowSorting= 'true' 
+  (rowSelected)="onRowSelected($event)">
+    <e-columns>
+      <e-column field='id'  isPrimaryKey='true' headerText='Farm ID' textAlign='Center' width=90></e-column>
+      <e-column field='farmNo' headerText='Farm Number' textAlign='Center' width=90></e-column>
+      <e-column field='farmName' headerText='Farm Name' textAlign='Left' width=90></e-column>
+    </e-columns>
+  </ejs-grid>
+</div>
