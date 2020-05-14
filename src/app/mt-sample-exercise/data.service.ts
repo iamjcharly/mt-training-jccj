@@ -9,7 +9,7 @@ import { Farm } from './farm';
 })
 export class DataService {
   
-  private url = 'https://api.jsonbin.io/b/5ebca118a47fdd6af162e670';
+  private url = 'https://api.jsonbin.io/b/5ebca118a47fdd6af162e670/1';
 
   constructor(private http: HttpClient){}
 
